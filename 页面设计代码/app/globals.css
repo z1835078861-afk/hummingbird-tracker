@@ -1,0 +1,223 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* BirdSnap Brand Colors */
+  --reed-green: #5B6751;
+  --light-ochre: #A27F67;
+  --muxing-grey: #E3D8C6;
+  --warm-white: #F7F5F0;
+  --pure-white: #FFFFFF;
+  
+  /* Text Colors */
+  --text-dark: #2C2C2C;
+  --text-body: #4A4A4A;
+  --text-muted: #999999;
+  --text-light: #FFFFFF;
+  
+  --background: #FFFFFF;
+  --foreground: #2C2C2C;
+  --card: #FFFFFF;
+  --card-foreground: #2C2C2C;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C2C2C;
+  --primary: #5B6751;
+  --primary-foreground: #FFFFFF;
+  --secondary: #A27F67;
+  --secondary-foreground: #FFFFFF;
+  --muted: #F7F5F0;
+  --muted-foreground: #4A4A4A;
+  --accent: #A27F67;
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: rgba(91, 103, 81, 0.12);
+  --input: rgba(91, 103, 81, 0.2);
+  --ring: #5B6751;
+  --chart-1: #5B6751;
+  --chart-2: #A27F67;
+  --chart-3: #8B9A7E;
+  --chart-4: #C4A98A;
+  --chart-5: #7A8B6E;
+  --radius: 0.75rem;
+  --sidebar: #5B6751;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #5B6751;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #A27F67;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #4a5642;
+  --sidebar-ring: #A27F67;
+}
+
+.dark {
+  --background: #2C2C2C;
+  --foreground: #E3D8C6;
+  --card: #3a3a3a;
+  --card-foreground: #E3D8C6;
+  --popover: #3a3a3a;
+  --popover-foreground: #E3D8C6;
+  --primary: #5B6751;
+  --primary-foreground: #FFFFFF;
+  --secondary: #A27F67;
+  --secondary-foreground: #FFFFFF;
+  --muted: #4a4a4a;
+  --muted-foreground: #a8a8a8;
+  --accent: #A27F67;
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: #4a4a4a;
+  --input: #4a4a4a;
+  --ring: #5B6751;
+  --chart-1: #5B6751;
+  --chart-2: #A27F67;
+  --chart-3: #8B9A7E;
+  --chart-4: #C4A98A;
+  --chart-5: #7A8B6E;
+  --sidebar: #2C2C2C;
+  --sidebar-foreground: #E3D8C6;
+  --sidebar-primary: #5B6751;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #4a4a4a;
+  --sidebar-accent-foreground: #E3D8C6;
+  --sidebar-border: #4a4a4a;
+  --sidebar-ring: #5B6751;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-mono: 'Geist Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Custom brand colors */
+  --color-reed-green: var(--reed-green);
+  --color-light-ochre: var(--light-ochre);
+  --color-muxing-grey: var(--muxing-grey);
+  --color-warm-white: var(--warm-white);
+  --color-pure-white: var(--pure-white);
+  --color-text-dark: var(--text-dark);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-text-light: var(--text-light);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes fade-in-up {
+  0% { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Section spacing */
+.section-spacing {
+  @apply py-24 md:py-32 lg:py-40;
+}
+
+/* Card hover effect */
+.card-hover {
+  @apply transition-all duration-300 ease-out;
+}
+
+.card-hover:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+/* Text styling */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Leading relaxed for body text */
+.body-text {
+  @apply leading-relaxed text-[#4A4A4A];
+  line-height: 1.8;
+}

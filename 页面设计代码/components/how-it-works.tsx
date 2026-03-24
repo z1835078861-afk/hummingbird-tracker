@@ -1,0 +1,45 @@
+import { MapIcon, BarChart3, Bell } from "lucide-react"
+
+const steps = [
+  {
+    icon: MapIcon,
+    title: "eBird + Community Data",
+    description: "Thousands of birders report sightings daily to eBird. We aggregate this data in real time.",
+  },
+  {
+    icon: BarChart3,
+    title: "Smart Analysis",
+    description: "We filter 10 hummingbird species across North America and plot their northward journey on a live 3D map.",
+  },
+  {
+    icon: Bell,
+    title: "Your Personal Alert",
+    description: "Enter your ZIP once. We'll email you the moment hummingbirds are reported within 150 miles of your home.",
+  },
+]
+
+export function HowItWorks() {
+  return (
+    <section className="py-16 md:py-20 bg-white">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <h3 className="text-center text-sm font-medium text-[#999999] uppercase tracking-wider mb-10">
+          How It Works
+        </h3>
+
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          {steps.map((step, idx) => (
+            <div key={idx} className="text-center">
+              <div className="w-12 h-12 rounded-full bg-[#F7F5F0] flex items-center justify-center mx-auto mb-4">
+                <step.icon className="h-5 w-5 text-[#5B6751]" />
+              </div>
+              <h4 className="font-medium text-[#2C2C2C] mb-2">{step.title}</h4>
+              <p className="text-sm text-[#4A4A4A] leading-relaxed max-w-xs mx-auto">
+                {step.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
