@@ -55,8 +55,8 @@ interface MonthRegion {
 }
 
 const rubyThroatedRegions: Record<number, MonthRegion> = {
-  1:  { count: 120, latMin: 15, latMax: 23, lngMin: -97,  lngMax: -82 },
-  2:  { count: 120, latMin: 15, latMax: 24, lngMin: -97,  lngMax: -82 },
+  1:  { count: 120, latMin: 18, latMax: 23, lngMin: -97,  lngMax: -86 },
+  2:  { count: 120, latMin: 18, latMax: 24, lngMin: -97,  lngMax: -86 },
   3:  { count: 150, latMin: 29, latMax: 33, lngMin: -97,  lngMax: -82 },
   4:  { count: 160, latMin: 30, latMax: 38, lngMin: -95,  lngMax: -75 },
   5:  { count: 180, latMin: 35, latMax: 45, lngMin: -90,  lngMax: -70 },
@@ -65,12 +65,12 @@ const rubyThroatedRegions: Record<number, MonthRegion> = {
   8:  { count: 180, latMin: 36, latMax: 46, lngMin: -88,  lngMax: -70 },
   9:  { count: 150, latMin: 30, latMax: 42, lngMin: -92,  lngMax: -72 },
   10: { count: 130, latMin: 29, latMax: 35, lngMin: -97,  lngMax: -80 },
-  11: { count: 110, latMin: 17, latMax: 27, lngMin: -97,  lngMax: -82 },
-  12: { count: 110, latMin: 15, latMax: 24, lngMin: -97,  lngMax: -82 },
+  11: { count: 110, latMin: 18, latMax: 23, lngMin: -97,  lngMax: -86 },
+  12: { count: 110, latMin: 18, latMax: 23, lngMin: -97,  lngMax: -86 },
 }
 
 const rufousRegions: Record<number, MonthRegion> = {
-  1:  { count: 100, latMin: 18, latMax: 25, lngMin: -112, lngMax: -100 },
+  1:  { count: 100, latMin: 22, latMax: 28, lngMin: -106, lngMax: -100 },
   2:  { count: 110, latMin: 22, latMax: 34, lngMin: -117, lngMax: -110 },
   3:  { count: 130, latMin: 30, latMax: 42, lngMin: -124, lngMax: -115 },
   4:  { count: 150, latMin: 38, latMax: 50, lngMin: -124, lngMax: -118 },
@@ -80,13 +80,13 @@ const rufousRegions: Record<number, MonthRegion> = {
   8:  { count: 150, latMin: 40, latMax: 55, lngMin: -120, lngMax: -105 },
   9:  { count: 130, latMin: 30, latMax: 44, lngMin: -118, lngMax: -105 },
   10: { count: 110, latMin: 25, latMax: 36, lngMin: -115, lngMax: -102 },
-  11: { count: 100, latMin: 19, latMax: 28, lngMin: -112, lngMax: -100 },
-  12: { count: 100, latMin: 18, latMax: 25, lngMin: -112, lngMax: -100 },
+  11: { count: 100, latMin: 22, latMax: 28, lngMin: -106, lngMax: -100 },
+  12: { count: 100, latMin: 22, latMax: 28, lngMin: -106, lngMax: -100 },
 }
 
 const blackChinnedRegions: Record<number, MonthRegion> = {
-  1:  { count: 90,  latMin: 18, latMax: 25, lngMin: -112, lngMax: -100 },
-  2:  { count: 90,  latMin: 18, latMax: 26, lngMin: -112, lngMax: -100 },
+  1:  { count: 90,  latMin: 22, latMax: 28, lngMin: -106, lngMax: -100 },
+  2:  { count: 90,  latMin: 22, latMax: 28, lngMin: -106, lngMax: -100 },
   3:  { count: 110, latMin: 25, latMax: 33, lngMin: -115, lngMax: -103 },
   4:  { count: 140, latMin: 30, latMax: 37, lngMin: -118, lngMax: -103 },
   5:  { count: 170, latMin: 32, latMax: 42, lngMin: -120, lngMax: -103 },
@@ -95,23 +95,23 @@ const blackChinnedRegions: Record<number, MonthRegion> = {
   8:  { count: 160, latMin: 32, latMax: 41, lngMin: -118, lngMax: -103 },
   9:  { count: 130, latMin: 28, latMax: 38, lngMin: -118, lngMax: -103 },
   10: { count: 100, latMin: 25, latMax: 33, lngMin: -115, lngMax: -100 },
-  11: { count: 90,  latMin: 19, latMax: 27, lngMin: -112, lngMax: -100 },
-  12: { count: 90,  latMin: 18, latMax: 25, lngMin: -112, lngMax: -100 },
+  11: { count: 90,  latMin: 22, latMax: 28, lngMin: -106, lngMax: -100 },
+  12: { count: 90,  latMin: 22, latMax: 28, lngMin: -106, lngMax: -100 },
 }
 
 const annasRegions: Record<number, MonthRegion> = {
-  1:  { count: 140, latMin: 30, latMax: 40, lngMin: -122, lngMax: -115 },
-  2:  { count: 140, latMin: 30, latMax: 41, lngMin: -122, lngMax: -115 },
-  3:  { count: 150, latMin: 32, latMax: 44, lngMin: -122, lngMax: -118 },
-  4:  { count: 160, latMin: 33, latMax: 46, lngMin: -122, lngMax: -118 },
-  5:  { count: 170, latMin: 34, latMax: 48, lngMin: -122, lngMax: -118 },
-  6:  { count: 170, latMin: 34, latMax: 48, lngMin: -122, lngMax: -118 },
-  7:  { count: 170, latMin: 34, latMax: 48, lngMin: -122, lngMax: -118 },
-  8:  { count: 160, latMin: 33, latMax: 47, lngMin: -122, lngMax: -118 },
-  9:  { count: 150, latMin: 32, latMax: 46, lngMin: -122, lngMax: -118 },
-  10: { count: 150, latMin: 31, latMax: 44, lngMin: -122, lngMax: -117 },
-  11: { count: 140, latMin: 30, latMax: 41, lngMin: -122, lngMax: -115 },
-  12: { count: 140, latMin: 30, latMax: 40, lngMin: -122, lngMax: -115 },
+  1:  { count: 140, latMin: 32, latMax: 40, lngMin: -119, lngMax: -115 },
+  2:  { count: 140, latMin: 32, latMax: 41, lngMin: -119, lngMax: -115 },
+  3:  { count: 150, latMin: 33, latMax: 44, lngMin: -119, lngMax: -117 },
+  4:  { count: 160, latMin: 33, latMax: 46, lngMin: -119, lngMax: -117 },
+  5:  { count: 170, latMin: 34, latMax: 48, lngMin: -119, lngMax: -117 },
+  6:  { count: 170, latMin: 34, latMax: 48, lngMin: -119, lngMax: -117 },
+  7:  { count: 170, latMin: 34, latMax: 48, lngMin: -119, lngMax: -117 },
+  8:  { count: 160, latMin: 33, latMax: 47, lngMin: -119, lngMax: -117 },
+  9:  { count: 150, latMin: 33, latMax: 46, lngMin: -119, lngMax: -117 },
+  10: { count: 150, latMin: 32, latMax: 44, lngMin: -119, lngMax: -117 },
+  11: { count: 140, latMin: 32, latMax: 41, lngMin: -119, lngMax: -115 },
+  12: { count: 140, latMin: 32, latMax: 40, lngMin: -119, lngMax: -115 },
 }
 
 function buildSpecies(
