@@ -55,18 +55,18 @@ interface MonthRegion {
 }
 
 const rubyThroatedRegions: Record<number, MonthRegion> = {
-  1:  { count: 120, latMin: 15, latMax: 23, lngMin: -105, lngMax: -85 },
-  2:  { count: 120, latMin: 15, latMax: 24, lngMin: -105, lngMax: -85 },
-  3:  { count: 150, latMin: 25, latMax: 33, lngMin: -98,  lngMax: -82 },
+  1:  { count: 120, latMin: 15, latMax: 23, lngMin: -97,  lngMax: -82 },
+  2:  { count: 120, latMin: 15, latMax: 24, lngMin: -97,  lngMax: -82 },
+  3:  { count: 150, latMin: 29, latMax: 33, lngMin: -97,  lngMax: -82 },
   4:  { count: 160, latMin: 30, latMax: 38, lngMin: -95,  lngMax: -75 },
   5:  { count: 180, latMin: 35, latMax: 45, lngMin: -90,  lngMax: -70 },
   6:  { count: 200, latMin: 38, latMax: 48, lngMin: -85,  lngMax: -68 },
   7:  { count: 200, latMin: 38, latMax: 48, lngMin: -85,  lngMax: -68 },
   8:  { count: 180, latMin: 36, latMax: 46, lngMin: -88,  lngMax: -70 },
   9:  { count: 150, latMin: 30, latMax: 42, lngMin: -92,  lngMax: -72 },
-  10: { count: 130, latMin: 25, latMax: 35, lngMin: -98,  lngMax: -80 },
-  11: { count: 110, latMin: 17, latMax: 27, lngMin: -105, lngMax: -85 },
-  12: { count: 110, latMin: 15, latMax: 24, lngMin: -105, lngMax: -85 },
+  10: { count: 130, latMin: 29, latMax: 35, lngMin: -97,  lngMax: -80 },
+  11: { count: 110, latMin: 17, latMax: 27, lngMin: -97,  lngMax: -82 },
+  12: { count: 110, latMin: 15, latMax: 24, lngMin: -97,  lngMax: -82 },
 }
 
 const rufousRegions: Record<number, MonthRegion> = {
