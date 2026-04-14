@@ -3,8 +3,8 @@ import { MapIcon, BarChart3, Bell } from "lucide-react"
 const steps = [
   {
     icon: MapIcon,
-    title: "eBird + Community Data",
-    description: "Thousands of birders report sightings daily to eBird. We aggregate this data in real time.",
+    title: "eBird + BirdSnap Data",
+    description: "Thousands of birders report sightings daily to eBird and BirdSnap. We aggregate this data in real time.",
   },
   {
     icon: BarChart3,
@@ -26,14 +26,14 @@ export function HowItWorks() {
           How It Works
         </h3>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-3 gap-4 md:gap-12">
           {steps.map((step, idx) => (
             <div key={idx} className="text-center">
-              <div className="w-12 h-12 rounded-full bg-[#F7F5F0] flex items-center justify-center mx-auto mb-4">
-                <step.icon className="h-5 w-5 text-[#5B6751]" />
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#F7F5F0] flex items-center justify-center mx-auto mb-2 md:mb-4">
+                <step.icon className="h-4 w-4 md:h-5 md:w-5 text-[#5B6751]" />
               </div>
-              <h4 className="font-medium text-[#2C2C2C] mb-2">{step.title}</h4>
-              <p className="text-sm text-[#4A4A4A] leading-relaxed max-w-xs mx-auto">
+              <h4 className="font-medium text-[#2C2C2C] mb-1 md:mb-2 text-xs md:text-base">{step.title}</h4>
+              <p className="text-[10px] md:text-sm text-[#4A4A4A] leading-relaxed max-w-xs mx-auto">
                 {step.description}
               </p>
             </div>
