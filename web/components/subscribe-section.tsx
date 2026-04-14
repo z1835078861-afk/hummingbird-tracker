@@ -166,7 +166,7 @@ export function SubscribeSection() {
           </p>
 
           {/* Image */}
-          <div className="relative w-full mb-6 rounded-xl overflow-hidden h-48">
+          <div className="relative w-full mb-6 rounded-xl overflow-hidden aspect-[16/9]">
             <Image
               src="/images/subscribe.jpg"
               alt="Hummingbird at feeder"
