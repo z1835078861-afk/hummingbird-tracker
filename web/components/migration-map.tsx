@@ -101,14 +101,15 @@ export function MigrationMap() {
       {/* Fullscreen map */}
       <MapInner points={points} />
 
-      {/* Floating: Section Header + Stats */}
-      <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none">
-        <div className="flex items-center justify-center gap-3 mb-1">
-          <h2 className="font-serif text-2xl md:text-4xl font-bold text-[#2C2C2C] drop-shadow-sm">
+      {/* Floating: Header + Filters */}
+      <div className="absolute top-3 md:top-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 md:gap-2 w-full px-3">
+        {/* Title + Stats */}
+        <div className="flex items-center gap-2 md:gap-3">
+          <h2 className="font-serif text-xl md:text-4xl font-bold text-[#2C2C2C] drop-shadow-sm whitespace-nowrap">
             Migration Tracker
           </h2>
-          <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1 shadow-md">
-            <div className="text-sm md:text-lg font-bold text-[#2C2C2C]">
+          <div className="bg-white/90 backdrop-blur-sm rounded-lg px-2 md:px-3 py-0.5 md:py-1 shadow-md">
+            <div className="text-xs md:text-lg font-bold text-[#2C2C2C] whitespace-nowrap">
               {sightingCount.toLocaleString()} sightings
             </div>
           </div>
@@ -116,32 +117,31 @@ export function MigrationMap() {
         <p className="text-[#5B6751] text-xs md:text-base drop-shadow-sm hidden md:block">
           Watch the migration unfold throughout the year.
         </p>
-      </div>
-
-      {/* Floating: Species Filter Bar */}
-      <div className="absolute top-16 md:top-28 left-1/2 -translate-x-1/2 z-10 flex flex-wrap justify-center gap-1.5 md:gap-2 px-2 max-w-[95vw]">
-        {SPECIES_FILTERS.map((filter) => {
-          const isActive = activeFilter === filter.key
-          return (
-            <button
-              key={filter.key}
-              onClick={() => setActiveFilter(filter.key)}
-              className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium border transition-all duration-200 shadow-sm"
-              style={{
-                backgroundColor: isActive ? filter.color : 'rgba(255,255,255,0.9)',
-                color: isActive ? '#fff' : filter.color,
-                borderColor: filter.color,
-                opacity: isActive ? 1 : 0.8,
-              }}
-            >
-              <span
-                className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full"
-                style={{ backgroundColor: isActive ? '#fff' : filter.color }}
-              />
-              {filter.label}
-            </button>
-          )
-        })}
+        {/* Species Filter Bar */}
+        <div className="flex flex-wrap justify-center gap-1 md:gap-2 max-w-[95vw]">
+          {SPECIES_FILTERS.map((filter) => {
+            const isActive = activeFilter === filter.key
+            return (
+              <button
+                key={filter.key}
+                onClick={() => setActiveFilter(filter.key)}
+                className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-0.5 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium border transition-all duration-200 shadow-sm"
+                style={{
+                  backgroundColor: isActive ? filter.color : 'rgba(255,255,255,0.9)',
+                  color: isActive ? '#fff' : filter.color,
+                  borderColor: filter.color,
+                  opacity: isActive ? 1 : 0.8,
+                }}
+              >
+                <span
+                  className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full"
+                  style={{ backgroundColor: isActive ? '#fff' : filter.color }}
+                />
+                {filter.label}
+              </button>
+            )
+          })}
+        </div>
       </div>
 
       {/* Floating: Timeline Slider — bottom */}
