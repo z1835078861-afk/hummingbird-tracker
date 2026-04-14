@@ -33,7 +33,6 @@ export async function POST(req: NextRequest) {
     body: JSON.stringify({
       email,
       status: 'subscribed',
-      statusDate: new Date().toISOString(),
       tags: ['hummingbird-tracker'],
       customProperties: {
         zipCode,
