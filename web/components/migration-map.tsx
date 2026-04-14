@@ -101,32 +101,32 @@ export function MigrationMap() {
       {/* Fullscreen map */}
       <MapInner points={points} />
 
-      {/* Floating: Section Header */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#2C2C2C] mb-2 text-balance drop-shadow-sm">
-          Migration Tracker
-        </h2>
-        <p className="text-[#5B6751] max-w-2xl mx-auto text-base drop-shadow-sm">
+      {/* Floating: Section Header + Stats */}
+      <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none">
+        <div className="flex items-center justify-center gap-3 mb-1">
+          <h2 className="font-serif text-2xl md:text-4xl font-bold text-[#2C2C2C] drop-shadow-sm">
+            Migration Tracker
+          </h2>
+          <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1 shadow-md">
+            <div className="text-sm md:text-lg font-bold text-[#2C2C2C]">
+              {sightingCount.toLocaleString()} sightings
+            </div>
+          </div>
+        </div>
+        <p className="text-[#5B6751] text-xs md:text-base drop-shadow-sm hidden md:block">
           Watch the migration unfold throughout the year.
         </p>
       </div>
 
-      {/* Floating: Stats — top-right */}
-      <div className="absolute top-6 right-6 z-10 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
-        <div className="text-lg font-bold text-[#2C2C2C]">
-          {sightingCount.toLocaleString()} sightings
-        </div>
-      </div>
-
-      {/* Floating: Species Filter Bar — top below header */}
-      <div className="absolute top-24 md:top-28 left-1/2 -translate-x-1/2 z-10 flex flex-wrap justify-center gap-2">
+      {/* Floating: Species Filter Bar */}
+      <div className="absolute top-16 md:top-28 left-1/2 -translate-x-1/2 z-10 flex flex-wrap justify-center gap-1.5 md:gap-2 px-2 max-w-[95vw]">
         {SPECIES_FILTERS.map((filter) => {
           const isActive = activeFilter === filter.key
           return (
             <button
               key={filter.key}
               onClick={() => setActiveFilter(filter.key)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 shadow-sm"
+              className="flex items-center gap-1 md:gap-1.5 px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-medium border transition-all duration-200 shadow-sm"
               style={{
                 backgroundColor: isActive ? filter.color : 'rgba(255,255,255,0.9)',
                 color: isActive ? '#fff' : filter.color,
@@ -135,7 +135,7 @@ export function MigrationMap() {
               }}
             >
               <span
-                className="w-2 h-2 rounded-full"
+                className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full"
                 style={{ backgroundColor: isActive ? '#fff' : filter.color }}
               />
               {filter.label}
@@ -145,22 +145,21 @@ export function MigrationMap() {
       </div>
 
       {/* Floating: Timeline Slider — bottom */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 w-[90vw] max-w-2xl bg-white/90 backdrop-blur-sm rounded-xl px-5 py-3 shadow-lg">
-        <div className="flex items-center gap-4">
-          {/* Play / Pause button */}
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-10 w-[92vw] max-w-2xl bg-white/90 backdrop-blur-sm rounded-xl px-3 md:px-5 py-2.5 md:py-3 shadow-lg">
+        <div className="flex items-center gap-2 md:gap-4">
           <button
             onClick={togglePlay}
-            className="flex items-center justify-center w-9 h-9 rounded-full bg-[#5B6751] text-white hover:bg-[#4a5642] transition-colors shrink-0"
+            className="flex items-center justify-center w-8 h-8 md:w-9 md:h-9 rounded-full bg-[#5B6751] text-white hover:bg-[#4a5642] transition-colors shrink-0"
             aria-label={playing ? 'Pause' : 'Play'}
           >
             {playing ? (
-              <span className="text-sm leading-none">⏸</span>
+              <span className="text-xs md:text-sm leading-none">⏸</span>
             ) : (
-              <span className="text-sm leading-none">▶</span>
+              <span className="text-xs md:text-sm leading-none">▶</span>
             )}
           </button>
 
-          <span className="text-sm font-semibold text-[#2C2C2C] w-24 whitespace-nowrap">
+          <span className="text-xs md:text-sm font-semibold text-[#2C2C2C] w-16 md:w-24 whitespace-nowrap">
             {MONTH_NAMES[month]}
           </span>
 
@@ -171,9 +170,9 @@ export function MigrationMap() {
             max={12}
             step={1}
             className="flex-1"
-            />
+          />
 
-          <span className="text-sm font-medium text-[#5B6751] w-8 text-right">Dec</span>
+          <span className="text-xs md:text-sm font-medium text-[#5B6751] w-8 text-right">Dec</span>
         </div>
       </div>
     </section>

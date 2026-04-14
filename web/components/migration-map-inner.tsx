@@ -41,13 +41,14 @@ export default function MigrationMapInner({ points }: Props) {
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return
 
+    const isMobile = window.innerWidth < 768
     const map = new mapboxgl.Map({
       container: containerRef.current,
       style: 'mapbox://styles/mapbox/light-v11',
-      center: [-95, 38],
-      zoom: 3.5,
-      minZoom: 3.5,
-      maxZoom: 3.5,
+      center: isMobile ? [-98, 30] : [-95, 38],
+      zoom: isMobile ? 2.5 : 3.5,
+      minZoom: isMobile ? 2.5 : 3.5,
+      maxZoom: isMobile ? 2.5 : 3.5,
       pitch: 0,
       bearing: 0,
       scrollZoom: false,
@@ -106,7 +107,7 @@ export default function MigrationMapInner({ points }: Props) {
         type: 'circle',
         source: 'migration',
         paint: {
-          'circle-radius': 4,
+          'circle-radius': isMobile ? 3 : 4,
           'circle-color': ['get', 'color'],
           'circle-opacity': 0.55,
         },
