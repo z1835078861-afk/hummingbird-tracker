@@ -21,20 +21,12 @@ export const metadata: Metadata = {
   description: 'Track real-time hummingbird migration across North America. Get alerts when they arrive near you.',
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/favicon.ico?v=4', sizes: 'any' },
+      { url: '/birdsnap-logo.png', type: 'image/png' },
+      { url: '/favicon.png', type: 'image/png' },
     ],
-    apple: '/apple-icon.png',
+    shortcut: '/favicon.ico?v=4',
+    apple: '/birdsnap-logo.png',
   },
 }
 
