@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico?v=4',
     apple: '/birdsnap-logo.png',
   },
+  other: {
+    'facebook-domain-verification': 'mvv7hhpf3zvy9340i92bae51z5bexf',
+  },
 }
 
 export default function RootLayout({
